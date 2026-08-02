@@ -1,5 +1,11 @@
 # Odysseia Engine v1.1.0 🦀☕
 
+> [!NOTE]
+> **Repositorio de continuidad de DrakesCraft-Labs.** Conserva el workspace Rust
+> experimental de Odysseia porque su remoto anterior dejó de estar disponible.
+> No reemplaza el plugin Java desplegado en Minecraft sin una decisión explícita,
+> compilación reproducible y validación en producción.
+
 <p align="center">
   <strong>Motor Mítico, Noche de Terror, Sistema de Bosses y Gestión para Purpur/Paper 1.21.11</strong><br>
   Reescrito en <strong>Rust (Edición 2021 Workspace)</strong> para máximo rendimiento + Binding nativo Java 21 (FFM / Project Panama).
