@@ -1,4 +1,7 @@
+# El rango 9000000-9000099 esta reservado para placeholders invalidos.
+# ProductCatalog y la suite de integridad rechazan cualquier reintroduccion.
 catalog-version: 1
+expected-product-count: 37
 source: "DrakesCraft production audit 2026-07-10"
 
 products:
@@ -12,7 +15,6 @@ products:
     verification: VERIFIED_PRODUCTION
     dependencies: [LuckPerms, Vault, ProtectionStones]
     actions:
-      - {id: base-rank, type: LUCKPERMS_PERMANENT, refund: NOT_REVOCABLE, parameters: {group: polis}}
       - {id: rank, type: LUCKPERMS_TEMPORARY, refund: AUTO_REVOKE, parameters: {group: hercules, duration: 30d, hierarchy: "1"}}
       - {id: money, type: ECONOMY, refund: MANUAL_REVIEW, parameters: {amount: "35000"}}
       - {id: kit, type: KIT, requires-online: true, refund: MANUAL_REVIEW, parameters: {kit: hercules}}
@@ -29,7 +31,6 @@ products:
     verification: VERIFIED_PRODUCTION
     dependencies: [LuckPerms, Vault, ProtectionStones]
     actions:
-      - {id: base-rank, type: LUCKPERMS_PERMANENT, refund: NOT_REVOCABLE, parameters: {group: polis}}
       - {id: rank, type: LUCKPERMS_TEMPORARY, refund: AUTO_REVOKE, parameters: {group: hestia, duration: 30d, hierarchy: "2"}}
       - {id: money, type: ECONOMY, refund: MANUAL_REVIEW, parameters: {amount: "75000"}}
       - {id: kit, type: KIT, requires-online: true, refund: MANUAL_REVIEW, parameters: {kit: hestia}}
@@ -46,7 +47,6 @@ products:
     verification: VERIFIED_PRODUCTION
     dependencies: [LuckPerms, Vault, ProtectionStones]
     actions:
-      - {id: base-rank, type: LUCKPERMS_PERMANENT, refund: NOT_REVOCABLE, parameters: {group: polis}}
       - {id: rank, type: LUCKPERMS_TEMPORARY, refund: AUTO_REVOKE, parameters: {group: hermes, duration: 30d, hierarchy: "3"}}
       - {id: money, type: ECONOMY, refund: MANUAL_REVIEW, parameters: {amount: "150000"}}
       - {id: kit, type: KIT, requires-online: true, refund: MANUAL_REVIEW, parameters: {kit: hermes}}
@@ -63,7 +63,6 @@ products:
     verification: VERIFIED_PRODUCTION
     dependencies: [LuckPerms, Vault, ProtectionStones]
     actions:
-      - {id: base-rank, type: LUCKPERMS_PERMANENT, refund: NOT_REVOCABLE, parameters: {group: polis}}
       - {id: rank, type: LUCKPERMS_TEMPORARY, refund: AUTO_REVOKE, parameters: {group: hefesto, duration: 30d, hierarchy: "4"}}
       - {id: money, type: ECONOMY, refund: MANUAL_REVIEW, parameters: {amount: "250000"}}
       - {id: kit, type: KIT, requires-online: true, refund: MANUAL_REVIEW, parameters: {kit: hefesto}}
@@ -80,7 +79,6 @@ products:
     verification: VERIFIED_PRODUCTION
     dependencies: [LuckPerms, Vault, ProtectionStones]
     actions:
-      - {id: base-rank, type: LUCKPERMS_PERMANENT, refund: NOT_REVOCABLE, parameters: {group: polis}}
       - {id: rank, type: LUCKPERMS_TEMPORARY, refund: AUTO_REVOKE, parameters: {group: artemisa, duration: 30d, hierarchy: "5"}}
       - {id: money, type: ECONOMY, refund: MANUAL_REVIEW, parameters: {amount: "450000"}}
       - {id: kit, type: KIT, requires-online: true, refund: MANUAL_REVIEW, parameters: {kit: artemisa}}
@@ -97,7 +95,6 @@ products:
     verification: VERIFIED_PRODUCTION
     dependencies: [LuckPerms, Vault, ProtectionStones]
     actions:
-      - {id: base-rank, type: LUCKPERMS_PERMANENT, refund: NOT_REVOCABLE, parameters: {group: polis}}
       - {id: rank, type: LUCKPERMS_TEMPORARY, refund: AUTO_REVOKE, parameters: {group: afrodita, duration: 30d, hierarchy: "6"}}
       - {id: money, type: ECONOMY, refund: MANUAL_REVIEW, parameters: {amount: "700000"}}
       - {id: kit, type: KIT, requires-online: true, refund: MANUAL_REVIEW, parameters: {kit: afrodita}}
@@ -114,13 +111,177 @@ products:
     verification: VERIFIED_PRODUCTION
     dependencies: [LuckPerms, Vault, ProtectionStones]
     actions:
-      - {id: base-rank, type: LUCKPERMS_PERMANENT, refund: NOT_REVOCABLE, parameters: {group: polis}}
       - {id: rank, type: LUCKPERMS_TEMPORARY, refund: AUTO_REVOKE, parameters: {group: zeus, duration: 30d, hierarchy: "7"}}
       - {id: money, type: ECONOMY, refund: MANUAL_REVIEW, parameters: {amount: "1500000"}}
       - {id: kit, type: KIT, requires-online: true, refund: MANUAL_REVIEW, parameters: {kit: zeus}}
       - {id: claim, type: PROTECTION_STONE, requires-online: true, refund: MANUAL_REVIEW, parameters: {alias: vipzeus, amount: "1"}}
       - {id: notify, type: NOTIFICATION, requires-online: true, required: false, refund: NOT_REVOCABLE, parameters: {message: "&aCompra Zeus entregada."}}
       - {id: announce, type: ANNOUNCEMENT, refund: NOT_REVOCABLE, parameters: {product: "Zeus"}}
+
+  vip_thor:
+    tebex-package-id: 7610512
+    name: "Thor"
+    category: ranks
+    description: "Rango VIP mensual Thor."
+    source: "LuckPerms + Odysseia + ProtectionStones"
+    version: 1
+    verification: VERIFIED_PRODUCTION
+    dependencies: [LuckPerms, Vault, ProtectionStones]
+    actions:
+      - {id: base-rank, type: LUCKPERMS_PERMANENT, refund: NOT_REVOCABLE, parameters: {group: polis}}
+      - {id: rank, type: LUCKPERMS_TEMPORARY, refund: AUTO_REVOKE, parameters: {group: thor, duration: 30d, hierarchy: "8"}}
+      - {id: money, type: ECONOMY, refund: MANUAL_REVIEW, parameters: {amount: "2000000"}}
+      - {id: kit, type: KIT, requires-online: true, refund: MANUAL_REVIEW, parameters: {kit: thor}}
+      - {id: claim, type: PROTECTION_STONE, requires-online: true, refund: MANUAL_REVIEW, parameters: {alias: vipthor, amount: "1"}}
+      - {id: notify, type: NOTIFICATION, requires-online: true, required: false, refund: NOT_REVOCABLE, parameters: {message: "&aCompra Thor entregada."}}
+      - {id: announce, type: ANNOUNCEMENT, refund: NOT_REVOCABLE, parameters: {product: "Thor"}}
+
+  vip_anubis:
+    tebex-package-id: 7610520
+    name: "Anubis"
+    category: ranks
+    description: "Rango VIP mensual Anubis."
+    source: "LuckPerms + Odysseia + ProtectionStones"
+    version: 1
+    verification: VERIFIED_PRODUCTION
+    dependencies: [LuckPerms, Vault, ProtectionStones]
+    actions:
+      - {id: base-rank, type: LUCKPERMS_PERMANENT, refund: NOT_REVOCABLE, parameters: {group: polis}}
+      - {id: rank, type: LUCKPERMS_TEMPORARY, refund: AUTO_REVOKE, parameters: {group: anubis, duration: 30d, hierarchy: "9"}}
+      - {id: money, type: ECONOMY, refund: MANUAL_REVIEW, parameters: {amount: "2500000"}}
+      - {id: kit, type: KIT, requires-online: true, refund: MANUAL_REVIEW, parameters: {kit: anubis}}
+      - {id: claim, type: PROTECTION_STONE, requires-online: true, refund: MANUAL_REVIEW, parameters: {alias: vipanubis, amount: "1"}}
+      - {id: notify, type: NOTIFICATION, requires-online: true, required: false, refund: NOT_REVOCABLE, parameters: {message: "&aCompra Anubis entregada."}}
+      - {id: announce, type: ANNOUNCEMENT, refund: NOT_REVOCABLE, parameters: {product: "Anubis"}}
+
+  vip_poseidon:
+    tebex-package-id: 7610523
+    name: "Poseidón"
+    category: ranks
+    description: "Rango VIP mensual Poseidón."
+    source: "LuckPerms + Odysseia + ProtectionStones"
+    version: 1
+    verification: VERIFIED_PRODUCTION
+    dependencies: [LuckPerms, Vault, ProtectionStones]
+    actions:
+      - {id: base-rank, type: LUCKPERMS_PERMANENT, refund: NOT_REVOCABLE, parameters: {group: polis}}
+      - {id: rank, type: LUCKPERMS_TEMPORARY, refund: AUTO_REVOKE, parameters: {group: poseidon, duration: 30d, hierarchy: "10"}}
+      - {id: money, type: ECONOMY, refund: MANUAL_REVIEW, parameters: {amount: "3000000"}}
+      - {id: kit, type: KIT, requires-online: true, refund: MANUAL_REVIEW, parameters: {kit: poseidon}}
+      - {id: claim, type: PROTECTION_STONE, requires-online: true, refund: MANUAL_REVIEW, parameters: {alias: vipposeidon, amount: "1"}}
+      # Pase SFMaster incluido en el rango. Va aparte del rango porque dura horas y no el mes
+      # entero: si se colgase del grupo poseidon expiraria a los 30 dias junto con todo lo demas.
+      - {id: sfmaster, type: SFMASTER_PASS, refund: AUTO_REVOKE, parameters: {group: sfmaster, duration: 24h}}
+      - {id: sfmaster-guide, type: SFMASTER_GUIDE, requires-online: true, refund: NOT_REVOCABLE}
+      - {id: notify, type: NOTIFICATION, requires-online: true, required: false, refund: NOT_REVOCABLE, parameters: {message: "&aCompra Poseidón entregada. &bIncluye 24 h de SFMaster."}}
+      - {id: announce, type: ANNOUNCEMENT, refund: NOT_REVOCABLE, parameters: {product: "Poseidón"}}
+
+  titan_japeto:
+    tebex-package-id: 7609642
+    name: "Titán Japeto"
+    category: ranks
+    description: "Rango Titán mensual Japeto (5x Favor Guerra)."
+    source: "LuckPerms + Odysseia + ProtectionStones"
+    version: 1
+    verification: UNVERIFIED_PRODUCTION
+    dependencies: [LuckPerms, Vault, ProtectionStones]
+    actions:
+      - {id: base-rank, type: LUCKPERMS_PERMANENT, refund: NOT_REVOCABLE, parameters: {group: polis}}
+      - {id: rank, type: LUCKPERMS_TEMPORARY, refund: AUTO_REVOKE, parameters: {group: titanjapeto, duration: 30d, hierarchy: "11"}}
+      - {id: money, type: ECONOMY, refund: MANUAL_REVIEW, parameters: {amount: "4000000"}}
+      - {id: kit, type: KIT, requires-online: true, refund: MANUAL_REVIEW, parameters: {kit: titanjapeto}}
+      - {id: claim, type: PROTECTION_STONE, requires-online: true, refund: MANUAL_REVIEW, parameters: {alias: titanjapeto, amount: "1"}}
+      - {id: notify, type: NOTIFICATION, requires-online: true, required: false, refund: NOT_REVOCABLE, parameters: {message: "&aCompra Titán Japeto entregada."}}
+      - {id: announce, type: ANNOUNCEMENT, refund: NOT_REVOCABLE, parameters: {product: "Titán Japeto"}}
+
+  titan_oceanus:
+    tebex-package-id: 7609645
+    name: "Titán Oceanus"
+    category: ranks
+    description: "Rango Titán mensual Oceanus (5x Favor Abismo)."
+    source: "LuckPerms + Odysseia + ProtectionStones"
+    version: 1
+    verification: UNVERIFIED_PRODUCTION
+    dependencies: [LuckPerms, Vault, ProtectionStones]
+    actions:
+      - {id: base-rank, type: LUCKPERMS_PERMANENT, refund: NOT_REVOCABLE, parameters: {group: polis}}
+      - {id: rank, type: LUCKPERMS_TEMPORARY, refund: AUTO_REVOKE, parameters: {group: titanoceanus, duration: 30d, hierarchy: "12"}}
+      - {id: money, type: ECONOMY, refund: MANUAL_REVIEW, parameters: {amount: "5000000"}}
+      - {id: kit, type: KIT, requires-online: true, refund: MANUAL_REVIEW, parameters: {kit: titanoceanus}}
+      - {id: claim, type: PROTECTION_STONE, requires-online: true, refund: MANUAL_REVIEW, parameters: {alias: titanoceanus, amount: "1"}}
+      - {id: notify, type: NOTIFICATION, requires-online: true, required: false, refund: NOT_REVOCABLE, parameters: {message: "&aCompra Titán Oceanus entregada."}}
+      - {id: announce, type: ANNOUNCEMENT, refund: NOT_REVOCABLE, parameters: {product: "Titán Oceanus"}}
+
+  titan_hiperion:
+    tebex-package-id: 7609646
+    name: "Titán Hiperión"
+    category: ranks
+    description: "Rango Titán mensual Hiperión (5x Favor Solar)."
+    source: "LuckPerms + Odysseia + ProtectionStones"
+    version: 1
+    verification: UNVERIFIED_PRODUCTION
+    dependencies: [LuckPerms, Vault, ProtectionStones]
+    actions:
+      - {id: base-rank, type: LUCKPERMS_PERMANENT, refund: NOT_REVOCABLE, parameters: {group: polis}}
+      - {id: rank, type: LUCKPERMS_TEMPORARY, refund: AUTO_REVOKE, parameters: {group: titanhiperion, duration: 30d, hierarchy: "13"}}
+      - {id: money, type: ECONOMY, refund: MANUAL_REVIEW, parameters: {amount: "6500000"}}
+      - {id: kit, type: KIT, requires-online: true, refund: MANUAL_REVIEW, parameters: {kit: titanhiperion}}
+      - {id: claim, type: PROTECTION_STONE, requires-online: true, refund: MANUAL_REVIEW, parameters: {alias: titanhiperion, amount: "1"}}
+      - {id: notify, type: NOTIFICATION, requires-online: true, required: false, refund: NOT_REVOCABLE, parameters: {message: "&aCompra Titán Hiperión entregada."}}
+      - {id: announce, type: ANNOUNCEMENT, refund: NOT_REVOCABLE, parameters: {product: "Titán Hiperión"}}
+
+  titan_cronos:
+    tebex-package-id: 7609648
+    name: "Titán Cronos"
+    category: ranks
+    description: "Rango Titán mensual Cronos (5x Favor Tiempo + Fly)."
+    source: "LuckPerms + Odysseia + ProtectionStones"
+    version: 1
+    verification: UNVERIFIED_PRODUCTION
+    dependencies: [LuckPerms, Vault, ProtectionStones]
+    actions:
+      - {id: base-rank, type: LUCKPERMS_PERMANENT, refund: NOT_REVOCABLE, parameters: {group: polis}}
+      - {id: rank, type: LUCKPERMS_TEMPORARY, refund: AUTO_REVOKE, parameters: {group: titancronos, duration: 30d, hierarchy: "14"}}
+      - {id: money, type: ECONOMY, refund: MANUAL_REVIEW, parameters: {amount: "8000000"}}
+      - {id: kit, type: KIT, requires-online: true, refund: MANUAL_REVIEW, parameters: {kit: titancronos}}
+      - {id: claim, type: PROTECTION_STONE, requires-online: true, refund: MANUAL_REVIEW, parameters: {alias: titancronos, amount: "1"}}
+      - {id: notify, type: NOTIFICATION, requires-online: true, required: false, refund: NOT_REVOCABLE, parameters: {message: "&aCompra Titán Cronos entregada."}}
+      - {id: announce, type: ANNOUNCEMENT, refund: NOT_REVOCABLE, parameters: {product: "Titán Cronos"}}
+
+  titan_caos:
+    tebex-package-id: 7609649
+    name: "Titán Caos"
+    category: ranks
+    description: "Rango Titán mensual Caos (Top Primordial 5x)."
+    source: "LuckPerms + Odysseia + ProtectionStones"
+    version: 1
+    verification: UNVERIFIED_PRODUCTION
+    dependencies: [LuckPerms, Vault, ProtectionStones]
+    actions:
+      - {id: base-rank, type: LUCKPERMS_PERMANENT, refund: NOT_REVOCABLE, parameters: {group: polis}}
+      - {id: rank, type: LUCKPERMS_TEMPORARY, refund: AUTO_REVOKE, parameters: {group: titancaos, duration: 30d, hierarchy: "15"}}
+      - {id: money, type: ECONOMY, refund: MANUAL_REVIEW, parameters: {amount: "10000000"}}
+      - {id: kit, type: KIT, requires-online: true, refund: MANUAL_REVIEW, parameters: {kit: titancaos}}
+      - {id: claim, type: PROTECTION_STONE, requires-online: true, refund: MANUAL_REVIEW, parameters: {alias: titancaos, amount: "1"}}
+      # El pase del Titán dura mas que el de Poseidon: es el escalon de arriba y tiene que notarse.
+      - {id: sfmaster, type: SFMASTER_PASS, refund: AUTO_REVOKE, parameters: {group: sfmaster, duration: 72h}}
+      - {id: sfmaster-guide, type: SFMASTER_GUIDE, requires-online: true, refund: NOT_REVOCABLE}
+      - {id: notify, type: NOTIFICATION, requires-online: true, required: false, refund: NOT_REVOCABLE, parameters: {message: "&aCompra Titán Caos entregada. &bIncluye 72 h de SFMaster."}}
+      - {id: announce, type: ANNOUNCEMENT, refund: NOT_REVOCABLE, parameters: {product: "Titán Caos"}}
+
+  slimefun_research_all:
+    tebex-package-id: 7609650
+    name: "Conocimiento Total de Slimefun"
+    category: utility
+    description: "Desbloqueo permanente de las investigaciones actuales de Slimefun, sin ítems ni permisos SFMaster."
+    source: "Odysseia + Slimefun"
+    version: 1
+    verification: UNVERIFIED_PRODUCTION
+    dependencies: [Slimefun]
+    actions:
+      - {id: research, type: SLIMEFUN_RESEARCH, requires-online: true, refund: NOT_REVOCABLE}
+      - {id: notify, type: NOTIFICATION, requires-online: true, required: false, refund: NOT_REVOCABLE, parameters: {message: "&aTodas tus investigaciones de Slimefun fueron desbloqueadas."}}
+      - {id: announce, type: ANNOUNCEMENT, refund: NOT_REVOCABLE, parameters: {product: "Conocimiento Total de Slimefun"}}
 
   role_minero: &role_minero
     tebex-package-id: 7510361
@@ -133,6 +294,8 @@ products:
     dependencies: [LuckPerms]
     actions:
       - {id: role, type: LUCKPERMS_TEMPORARY, refund: AUTO_REVOKE, parameters: {group: minero, duration: 30d}}
+      - {id: kit, type: KIT, requires-online: true, refund: MANUAL_REVIEW, parameters: {kit: rol_minero}}
+      - {id: money, type: ECONOMY, refund: MANUAL_REVIEW, parameters: {amount: "15000"}}
       - {id: notify, type: NOTIFICATION, requires-online: true, required: false, refund: NOT_REVOCABLE, parameters: {message: "&aRol Minero activado."}}
       - {id: announce, type: ANNOUNCEMENT, refund: NOT_REVOCABLE, parameters: {product: "Rol Minero"}}
   role_cazador:
@@ -142,6 +305,8 @@ products:
     description: "Rol mensual Cazador."
     actions:
       - {id: role, type: LUCKPERMS_TEMPORARY, refund: AUTO_REVOKE, parameters: {group: cazador, duration: 30d}}
+      - {id: kit, type: KIT, requires-online: true, refund: MANUAL_REVIEW, parameters: {kit: rol_cazador}}
+      - {id: money, type: ECONOMY, refund: MANUAL_REVIEW, parameters: {amount: "15000"}}
       - {id: notify, type: NOTIFICATION, requires-online: true, required: false, refund: NOT_REVOCABLE, parameters: {message: "&aRol Cazador activado."}}
       - {id: announce, type: ANNOUNCEMENT, refund: NOT_REVOCABLE, parameters: {product: "Rol Cazador"}}
   role_constructor:
@@ -151,6 +316,9 @@ products:
     description: "Rol mensual Constructor."
     actions:
       - {id: role, type: LUCKPERMS_TEMPORARY, refund: AUTO_REVOKE, parameters: {group: constructor, duration: 30d}}
+      - {id: kit, type: KIT, requires-online: true, refund: MANUAL_REVIEW, parameters: {kit: rol_constructor}}
+      - {id: money, type: ECONOMY, refund: MANUAL_REVIEW, parameters: {amount: "15000"}}
+      - {id: flight, type: TEMPORARY_PERMISSION, refund: AUTO_REVOKE, parameters: {permission: essentials.fly, duration: 7d}}
       - {id: notify, type: NOTIFICATION, requires-online: true, required: false, refund: NOT_REVOCABLE, parameters: {message: "&aRol Constructor activado."}}
       - {id: announce, type: ANNOUNCEMENT, refund: NOT_REVOCABLE, parameters: {product: "Rol Constructor"}}
   role_lenador:
@@ -160,6 +328,8 @@ products:
     description: "Rol mensual Leñador."
     actions:
       - {id: role, type: LUCKPERMS_TEMPORARY, refund: AUTO_REVOKE, parameters: {group: lenador, duration: 30d}}
+      - {id: kit, type: KIT, requires-online: true, refund: MANUAL_REVIEW, parameters: {kit: rol_lenador}}
+      - {id: money, type: ECONOMY, refund: MANUAL_REVIEW, parameters: {amount: "15000"}}
       - {id: notify, type: NOTIFICATION, requires-online: true, required: false, refund: NOT_REVOCABLE, parameters: {message: "&aRol Leñador activado."}}
       - {id: announce, type: ANNOUNCEMENT, refund: NOT_REVOCABLE, parameters: {product: "Rol Leñador"}}
   role_alquimista:
@@ -169,6 +339,8 @@ products:
     description: "Rol mensual Alquimista."
     actions:
       - {id: role, type: LUCKPERMS_TEMPORARY, refund: AUTO_REVOKE, parameters: {group: alquimista, duration: 30d}}
+      - {id: kit, type: KIT, requires-online: true, refund: MANUAL_REVIEW, parameters: {kit: rol_alquimista}}
+      - {id: money, type: ECONOMY, refund: MANUAL_REVIEW, parameters: {amount: "15000"}}
       - {id: notify, type: NOTIFICATION, requires-online: true, required: false, refund: NOT_REVOCABLE, parameters: {message: "&aRol Alquimista activado."}}
       - {id: announce, type: ANNOUNCEMENT, refund: NOT_REVOCABLE, parameters: {product: "Rol Alquimista"}}
   role_nomada:
@@ -178,6 +350,8 @@ products:
     description: "Rol mensual Nómada."
     actions:
       - {id: role, type: LUCKPERMS_TEMPORARY, refund: AUTO_REVOKE, parameters: {group: nomada, duration: 30d}}
+      - {id: kit, type: KIT, requires-online: true, refund: MANUAL_REVIEW, parameters: {kit: rol_nomada}}
+      - {id: money, type: ECONOMY, refund: MANUAL_REVIEW, parameters: {amount: "15000"}}
       - {id: notify, type: NOTIFICATION, requires-online: true, required: false, refund: NOT_REVOCABLE, parameters: {message: "&aRol Nómada activado."}}
       - {id: announce, type: ANNOUNCEMENT, refund: NOT_REVOCABLE, parameters: {product: "Rol Nómada"}}
 
@@ -224,13 +398,54 @@ products:
     tebex-package-id: 7510371
     name: "Protección 481x481"
     category: protection
-    description: "Protección pendiente de conciliación: existe ilios 481x481, pero el paquete Tebex 7510371 no tiene alias de entrega aprobado."
-    source: "Tebex package vs ProtectionStones production discrepancy; ProtectionStones production has ilios radius 240"
-    version: 1
-    verification: PARTIALLY_VERIFIED
+    description: "ProtectionStone VIP Zeus de 481x481 para bases y gremios grandes."
+    source: "ProtectionStones production: vipzeus radius 240"
+    version: 2
+    verification: VERIFIED_PRODUCTION
     dependencies: [ProtectionStones]
     actions:
-      - {id: review, type: MANUAL, refund: MANUAL_REVIEW, parameters: {reason: "Paquete 7510371 requiere decidir alias comercial: ilios 481x481, vipzeus 1801x1801 o un alias nuevo"}}
+      - {id: claim, type: PROTECTION_STONE, requires-online: true, refund: MANUAL_REVIEW, parameters: {alias: vipzeus, amount: "1"}}
+      - {id: notify, type: NOTIFICATION, requires-online: true, required: false, refund: NOT_REVOCABLE, parameters: {message: "&aProtección 481x481 entregada."}}
+      - {id: announce, type: ANNOUNCEMENT, refund: NOT_REVOCABLE, parameters: {product: "Protección 481x481"}}
+  protection_nether_colossus:
+    tebex-package-id: 7596916
+    name: "Coloso del Nether 501x501"
+    category: protection
+    description: "ProtectionStone exclusiva para una megabase en el Nether. Solo se puede colocar en world_nether."
+    source: "ProtectionStones production: nethercolossus radius 250"
+    version: 1
+    verification: VERIFIED_PRODUCTION
+    dependencies: [ProtectionStones]
+    actions:
+      - {id: claim, type: PROTECTION_STONE, requires-online: true, refund: MANUAL_REVIEW, parameters: {alias: nethercolossus, amount: "1"}}
+      - {id: notify, type: NOTIFICATION, requires-online: true, required: false, refund: NOT_REVOCABLE, parameters: {message: "&aColoso del Nether 501x501 entregado."}}
+      - {id: announce, type: ANNOUNCEMENT, refund: NOT_REVOCABLE, parameters: {product: "Coloso del Nether 501x501"}}
+  protection_end_colossus:
+    tebex-package-id: 7596920
+    name: "Coloso del End 501x501"
+    category: protection
+    description: "ProtectionStone exclusiva para una megabase en el End. Solo se puede colocar en world_the_end."
+    source: "ProtectionStones production: endcolossus radius 250"
+    version: 1
+    verification: VERIFIED_PRODUCTION
+    dependencies: [ProtectionStones]
+    actions:
+      - {id: claim, type: PROTECTION_STONE, requires-online: true, refund: MANUAL_REVIEW, parameters: {alias: endcolossus, amount: "1"}}
+      - {id: notify, type: NOTIFICATION, requires-online: true, required: false, refund: NOT_REVOCABLE, parameters: {message: "&aColoso del End 501x501 entregado."}}
+      - {id: announce, type: ANNOUNCEMENT, refund: NOT_REVOCABLE, parameters: {product: "Coloso del End 501x501"}}
+  protection_atlas:
+    tebex-package-id: 7596924
+    name: "Dominio de Atlas 1001x1001"
+    category: protection
+    description: "ProtectionStone exclusiva para una megabase en el Overworld. Solo se puede colocar en world."
+    source: "ProtectionStones production: atlas radius 500"
+    version: 1
+    verification: VERIFIED_PRODUCTION
+    dependencies: [ProtectionStones]
+    actions:
+      - {id: claim, type: PROTECTION_STONE, requires-online: true, refund: MANUAL_REVIEW, parameters: {alias: atlas, amount: "1"}}
+      - {id: notify, type: NOTIFICATION, requires-online: true, required: false, refund: NOT_REVOCABLE, parameters: {message: "&aDominio de Atlas 1001x1001 entregado."}}
+      - {id: announce, type: ANNOUNCEMENT, refund: NOT_REVOCABLE, parameters: {product: "Dominio de Atlas 1001x1001"}}
   economy_premium:
     tebex-package-id: 7510372
     name: "Economía Premium"
@@ -311,3 +526,32 @@ products:
       - {id: guide, type: SFMASTER_GUIDE, requires-online: true, refund: NOT_REVOCABLE}
       - {id: notify, type: NOTIFICATION, requires-online: true, required: false, refund: NOT_REVOCABLE, parameters: {message: "&aPase SFMaster de 24 horas activado."}}
       - {id: announce, type: ANNOUNCEMENT, refund: NOT_REVOCABLE, parameters: {product: "Pase SFMaster 24 horas"}}
+  anti_afk_permanent:
+    tebex-package-id: 7609651
+    name: "Pase Anti-AFK Vitalicio"
+    category: utility
+    description: "Inmunidad total y permanente al sistema de expulsión por inactividad y evasión pasiva."
+    source: "AutomationGuard + EssentialsX"
+    version: 1
+    verification: VERIFIED_PRODUCTION
+    dependencies: [LuckPerms]
+    actions:
+      - {id: perm-afk, type: TEMPORARY_PERMISSION, refund: AUTO_REVOKE, parameters: {permission: "drakescraft.afk.unlocked"}}
+      - {id: perm-essentials, type: TEMPORARY_PERMISSION, refund: AUTO_REVOKE, parameters: {permission: "essentials.afk.kickexempt"}}
+      - {id: notify, type: NOTIFICATION, requires-online: true, required: false, refund: NOT_REVOCABLE, parameters: {message: "&a¡Pase Anti-AFK Vitalicio activado! Eres inmune a la expulsión por inactividad."}}
+      - {id: announce, type: ANNOUNCEMENT, refund: NOT_REVOCABLE, parameters: {product: "Pase Anti-AFK Vitalicio"}}
+  anti_afk_30d:
+    tebex-package-id: 7609652
+    name: "Pase Anti-AFK 30 Días"
+    category: utility
+    description: "Inmunidad temporal de 30 días al sistema de expulsión por inactividad y evasión pasiva."
+    source: "AutomationGuard + EssentialsX"
+    version: 1
+    verification: VERIFIED_PRODUCTION
+    dependencies: [LuckPerms]
+    actions:
+      - {id: perm-afk, type: TEMPORARY_PERMISSION, refund: AUTO_REVOKE, parameters: {permission: "drakescraft.afk.unlocked", duration: 30d}}
+      - {id: perm-essentials, type: TEMPORARY_PERMISSION, refund: AUTO_REVOKE, parameters: {permission: "essentials.afk.kickexempt", duration: 30d}}
+      - {id: notify, type: NOTIFICATION, requires-online: true, required: false, refund: NOT_REVOCABLE, parameters: {message: "&a¡Pase Anti-AFK (30 Días) activado! Eres inmune a la expulsión por inactividad."}}
+      - {id: announce, type: ANNOUNCEMENT, refund: NOT_REVOCABLE, parameters: {product: "Pase Anti-AFK 30 Días"}}
+
